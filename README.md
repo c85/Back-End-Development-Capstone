@@ -780,6 +780,7 @@ Now that you have finished the code for the microservice, you can push the `back
 
 1. Use the `git commit -am` command to commit your changes with the message "implemented django application", and the `git push` command to push those changes to your repository.
 > Note: You will be prompted to set up your git user and email the first time you push:
+	
 	```bash
 	git config --local user.name "{your GitHub name here}"
 	git config --local user.email {your GitHub email here}

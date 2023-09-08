@@ -793,7 +793,7 @@ Now that you have finished the code for the microservice, you can push the `back
 	git push --set-upstream origin backend-rest
 	
 
-1. Create a pull request on GitHub to merge your changes into the main branch, and, since there is no one else on your team, accept the pull request, merge it, and delete the branch.
+2. Create a pull request on GitHub to merge your changes into the main branch, and, since there is no one else on your team, accept the pull request, merge it, and delete the branch.
 
 The main branch, at this point, should have your completed code.
 

@@ -87,11 +87,11 @@ Now, let's discuss each of these commands and explain what needs to be done.
 ## Task 1 - Clone the repository
 Initialize your environment using the following steps:
 
-1. Open a terminal with `Terminal` &gt; `New Terminal` if one is not open already.
+1. Open a terminal with `Terminal` > `New Terminal` if one is not open already.
 
 2. Next, use the export GITHUB_ACCOUNT command to export an environment variable that contains the name of your GitHub account.
 
-   &gt; **Note:** Substitute your real GitHub account for the {your_github_account} placeholder below:
+   > **Note:** Substitute your real GitHub account for the {your_github_account} placeholder below:
 
 ```bash
 export GITHUB_ACCOUNT={your_github_account}
@@ -124,7 +124,7 @@ exit
 ## Validate
 To validate that your environment is working correctly, you must open a new terminal because the Python virtual environment will only activate when a new terminal is created. You should have ended the previous task by using the `exit` command to exit the terminal.
 
-1. Open a terminal with `Terminal` &gt; `New Terminal` and check that everything worked correctly by using the `which python` command:
+1. Open a terminal with `Terminal` > `New Terminal` and check that everything worked correctly by using the `which python` command:
 
 	Check which Python you are using:
 
@@ -188,7 +188,7 @@ Before you make and run migrations, you need to finish the data models in the co
 	git checkout -b backend-rest
 	```
 
-	&gt; This will switch to the main branch, pull the latest changes, and create a new branch. You will be asked to push all your changes to your GitHub repo and merge all code back into your main branch with a pull request.
+	> This will switch to the main branch, pull the latest changes, and create a new branch. You will be asked to push all your changes to your GitHub repo and merge all code back into your main branch with a pull request.
 
 You can use the `git branch` command to see your current branch:
 ```bash
@@ -368,7 +368,7 @@ The songs link is working, but the view is still broken. Open the `Back-end-Deve
 		songs = {"songs":[{"id":1,"title":"duis faucibus accumsan odio curabitur convallis","lyrics":"Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis."}]}
 		return render(request, "songs.html", {"songs":songs["songs"]})
 	```
-	&gt; Note that you also need to remove the `pass` statement from the last line of the method.
+	> Note that you also need to remove the `pass` statement from the last line of the method.
 
 1. You should now see a song dislayed when you click the `Songs` page.
 
@@ -442,7 +442,7 @@ The photos link is working, but the view is still broken. Open the `Back-end-Dev
 		}]
 		return render(request, "photos.html", {"photos": photos})
 	```
-	&gt; Note that you also need to remove the `pass` statement from the last line of the method.
+	> Note that you also need to remove the `pass` statement from the last line of the method.
 
 1. You should now see a photo dislayed when you click the `photos` page
 
@@ -779,7 +779,7 @@ Open the `Back-end-Development-Capstone/concert/admin.py` file in the editor.
 Now that you have finished the code for the microservice, you can push the `backend-rest` branch back to your GitHub fork. Since you are the only one working on this project, go ahead and merge the PR and delete the branch. Make sure all your code changes are pushed back to the main branch before proceeding to the next lab.
 
 1. Use the `git commit -am` command to commit your changes with the message "implemented django application", and the `git push` command to push those changes to your repository.
-&gt; Note: You will be prompted to set up your git user and email the first time you push:
+> Note: You will be prompted to set up your git user and email the first time you push:
 	```
 	git config --local user.name "{your GitHub name here}"
 	git config --local user.email {your GitHub email here}

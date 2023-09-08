@@ -94,7 +94,7 @@ Initialize your environment using the following steps:
    &gt; **Note:** Substitute your real GitHub account for the {your_github_account} placeholder below:
 
 ```bash
-export GITHUB_ACCOUNT&#x3D;{your_github_account}
+export GITHUB_ACCOUNT={your_github_account}
 ```
 
 3. Then use the following commands to clone your repository.
@@ -247,30 +247,30 @@ Open the `Back-end-Development-Capstone/concert/models.py` file in the editor.
 1. `Concert` model should look as follows:
 	```
 	class Concert(models.Model):
-		concert_name &#x3D; models.CharField(max_length&#x3D;255)
-		duration &#x3D; models.IntegerField()
-		city &#x3D; models.CharField(max_length&#x3D;255)
-		date &#x3D; models.DateField(default&#x3D;datetime.now)
+		concert_name = models.CharField(max_length=255)
+		duration = models.IntegerField()
+		city = models.CharField(max_length=255)
+		date = models.DateField(default=datetime.now)
 	```
 
 1. `Photo` model should look as follows:
 	```
 	class Photo(models.Model):
-		id &#x3D; models.IntegerField(primary_key&#x3D;True)
-		pic_url &#x3D; models.CharField(max_length&#x3D;1000)
-		event_country &#x3D; models.CharField(max_length&#x3D;255)
-		event_state &#x3D; models.CharField(max_length&#x3D;255)
-		event_city &#x3D; models.CharField(max_length&#x3D;255)
-		event_date &#x3D; models.DateField(default&#x3D;datetime.now)
+		id = models.IntegerField(primary_key=True)
+		pic_url = models.CharField(max_length=1000)
+		event_country = models.CharField(max_length=255)
+		event_state = models.CharField(max_length=255)
+		event_city = models.CharField(max_length=255)
+		event_date = models.DateField(default=datetime.now)
 
 	```
 
 1. `Song` model should look as follows:
 	```
 	class Song(models.Model):
-		id &#x3D; models.IntegerField(primary_key&#x3D;True)
-		title &#x3D; models.CharField(max_length&#x3D;255)
-		lyrics &#x3D; models.TextField()
+		id = models.IntegerField(primary_key=True)
+		title = models.CharField(max_length=255)
+		lyrics = models.TextField()
 
 	```
 
@@ -333,15 +333,15 @@ Open the `Back-end-Development-Capstone/concert/urls.py` file in the editor.
 
 1. You should see all the URLs defined in this file:
 	```
-	urlpatterns &#x3D; [
-		re_path(r"^$", views.index, name&#x3D;"index"),
-		path("", views.songs, name&#x3D;"songs"),
+	urlpatterns = [
+		re_path(r"^$", views.index, name="index"),
+		path("", views.songs, name="songs"),
 		...
 	]
 	```
 1. Replace the first empty string for the songs urlpattern with `song/`
 	```bash
-	path("songs/", views.songs, name&#x3D;"songs"),
+	path("songs/", views.songs, name="songs"),
 	```
 
 1. If you click on the songs link now, you will get an error. However, you have made progress. Instead of the link not working at all, you are one step closer to getting it to work.
@@ -354,7 +354,7 @@ The songs link is working, but the view is still broken. Open the `Back-end-Deve
 1. Go to the method named `songs`.
 	```
 	def songs(request):
-		# songs &#x3D; {"songs":[]}
+		# songs = {"songs":[]}
 		# return render(request, "songs.html", {"songs": [insert list here]})
 		pass
 	```
@@ -365,7 +365,7 @@ The songs link is working, but the view is still broken. Open the `Back-end-Deve
 
 	```
 	def songs(request):
-		songs &#x3D; {"songs":[{"id":1,"title":"duis faucibus accumsan odio curabitur convallis","lyrics":"Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis."}]}
+		songs = {"songs":[{"id":1,"title":"duis faucibus accumsan odio curabitur convallis","lyrics":"Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis."}]}
 		return render(request, "songs.html", {"songs":songs["songs"]})
 	```
 	&gt; Note that you also need to remove the `pass` statement from the last line of the method.
@@ -393,16 +393,16 @@ Open the `Back-end-Development-Capstone/concert/urls.py` file in the editor.
 
 1. You should see all the URLs defined in this file:
 	```
-	urlpatterns &#x3D; [
-		re_path(r"^$", views.index, name&#x3D;"index"),
-		path("songs", views.songs, name&#x3D;"songs"),
-		path("", views.photos, name&#x3D;"photos"),
+	urlpatterns = [
+		re_path(r"^$", views.index, name="index"),
+		path("songs", views.songs, name="songs"),
+		path("", views.photos, name="photos"),
 		...
 	]
 	```
 1. Replace the first empty string for the photos urlpattern with `photos`.
 	```bash
-	path("photos/", views.photos, name&#x3D;"photos"),
+	path("photos/", views.photos, name="photos"),
 	```
 
 1. If you click on the photos link now, you will get an error. However, again, you have made progress.
@@ -414,7 +414,7 @@ The photos link is working, but the view is still broken. Open the `Back-end-Dev
 1. Go to the method named `photos`.
 	```
 	def photos(request):
-		# photos &#x3D; None
+		# photos = None
 		# return render(request, "photos.html", {"photos": photos})
 		pass
 	```
@@ -432,7 +432,7 @@ The photos link is working, but the view is still broken. Open the `Back-end-Dev
 
 	```
 	def photos(request):
-		photos &#x3D; [{
+		photos = [{
 		"id": 1,
 		"pic_url": "http://dummyimage.com/136x100.png/5fa2dd/ffffff",
 		"event_country": "United States",
@@ -466,19 +466,19 @@ Open the `Back-end-Development-Capstone/concert/urls.py` file in the editor.
 
 1. You should see all the URLs defined in this file:
 	```
-	urlpatterns &#x3D; [
-		re_path(r"^$", views.index, name&#x3D;"index"),
-		path("songs", views.songs, name&#x3D;"songs"),
-		path("photos", views.photos, name&#x3D;"photos"),
-		path("", views.login_view, name&#x3D;"login"),
-		path("", views.logout_view, name&#x3D;"logout"),
-		path("", views.signup, name&#x3D;"signup"),
+	urlpatterns = [
+		re_path(r"^$", views.index, name="index"),
+		path("songs", views.songs, name="songs"),
+		path("photos", views.photos, name="photos"),
+		path("", views.login_view, name="login"),
+		path("", views.logout_view, name="logout"),
+		path("", views.signup, name="signup"),
 		...
 	]
 	```
 1. Replace the first empty string for the signup urlpattern with `signup/`.
 	```bash
-	path("signup/", views.signup, name&#x3D;"signup"),
+	path("signup/", views.signup, name="signup"),
 	```
 
 1. If you were to click the `Signup` link now, you will get an error. However, again, you have made progress and we will fix this error in the next Task.
@@ -505,15 +505,15 @@ The Signup link is working, but the view is still broken. Open the `Back-end-Dev
 
 	We have provided the following skeleton code to get you started:
 	```
-	if request.method &#x3D;&#x3D; "POST":
-        username &#x3D; {insert code to get username from the request}
-        password &#x3D; {insert code to get password from the request}
+	if request.method == "POST":
+        username = {insert code to get username from the request}
+        password = {insert code to get password from the request}
         try:
-            user &#x3D; {insert code to find user using User.objects.filter method}
+            user = {insert code to find user using User.objects.filter method}
             if user:
 				return {insert code to render the signup.html page with the SignUpForm form and a message of "user already exist"}
             else:
-                user &#x3D; {insert code to create a new user using the User.objects.create method. Remmeber to use the make_password method to create the password securely}
+                user = {insert code to create a new user using the User.objects.create method. Remmeber to use the make_password method to create the password securely}
                 {insert code to log in the user with the django.contrib.aut. module}
                 {insert code to return the user back to the index page}
         except User.DoesNotExist:
@@ -531,16 +531,16 @@ The Signup link is working, but the view is still broken. Open the `Back-end-Dev
 1. Ensure your solution for the login_view method matches the following:
 	```
 	def signup(request):
-		if request.method &#x3D;&#x3D; "POST":
-			username &#x3D; request.POST.get("username")
-			password &#x3D; request.POST.get("password")
+		if request.method == "POST":
+			username = request.POST.get("username")
+			password = request.POST.get("password")
 			try:
-				user &#x3D; User.objects.filter(username&#x3D;username).first()
+				user = User.objects.filter(username=username).first()
 				if user:
 					return render(request, "signup.html", {"form": SignUpForm, "message": "user already exist"})
 				else:
-					user &#x3D; User.objects.create(
-						username&#x3D;username, password&#x3D;make_password(password))
+					user = User.objects.create(
+						username=username, password=make_password(password))
 					login(request, user)
 					return HttpResponseRedirect(reverse("index"))
 			except User.DoesNotExist:
@@ -560,19 +560,19 @@ Open the `Back-end-Development-Capstone/concert/urls.py` file in the editor.
 
 1. You should see all URLs defined in this file:
 	```
-	urlpatterns &#x3D; [
-		re_path(r"^$", views.index, name&#x3D;"index"),
-		path("songs", views.songs, name&#x3D;"songs"),
-		path("photos", views.photos, name&#x3D;"photos"),
-		path("", views.login_view, name&#x3D;"login"),
-		path("", views.logout_view, name&#x3D;"logout"),
+	urlpatterns = [
+		re_path(r"^$", views.index, name="index"),
+		path("songs", views.songs, name="songs"),
+		path("photos", views.photos, name="photos"),
+		path("", views.login_view, name="login"),
+		path("", views.logout_view, name="logout"),
 		...
 	]
 	```
 1. Replace the first empty string for the login urlpattern with `login/` and the logout urlpattern with `logout/`.
 	```
-	path("login/", views.login_view, name&#x3D;"login"),
-	path("logout/", views.logout_view, name&#x3D;"logout"),
+	path("login/", views.login_view, name="login"),
+	path("logout/", views.logout_view, name="logout"),
 	```
 
 1. If you click the `Login` link now, you will get an error. However, again, you have made progress and we will fix this error in the next Task.
@@ -598,12 +598,12 @@ The Login link is working, but the view is still broken. Open the `Back-end-Deve
 
 	We have provided the following skeleton code to get you started:
 	```
-	if request.method &#x3D;&#x3D; "POST":
-        if request.method &#x3D;&#x3D; "POST":
-        username &#x3D; {insert code to get username from the request}
-        password &#x3D; {insert code to get password from the request}
+	if request.method == "POST":
+        if request.method == "POST":
+        username = {insert code to get username from the request}
+        password = {insert code to get password from the request}
         try:
-            user &#x3D; {insert code to find the user with the username}
+            user = {insert code to find the user with the username}
 
             if {insert code to check the username and password}:
                 {insert code to log in the using the django.contrib.auth module}
@@ -639,11 +639,11 @@ As noted in the previous exercise, the logout link is still broken. Open the `Ba
 1. Ensure your solution for the login_view method matches the following:
 	```
 	def login_view(request):
-		if request.method &#x3D;&#x3D; "POST":
-			username &#x3D; request.POST.get("username")
-			password &#x3D; request.POST.get("password")
+		if request.method == "POST":
+			username = request.POST.get("username")
+			password = request.POST.get("password")
 			try:
-				user &#x3D; User.objects.get(username&#x3D;username)
+				user = User.objects.get(username=username)
 
 				if user.check_password(password):
 					login(request, user)
@@ -669,20 +669,20 @@ Open the `Back-end-Development-Capstone/concert/urls.py` file in the editor.
 
 1. You should see all the URLs defined in this file:
 	```
-	urlpatterns &#x3D; [
-		re_path(r"^$", views.index, name&#x3D;"index"),
-		path("songs", views.songs, name&#x3D;"songs"),
-		path("photos", views.photos, name&#x3D;"photos"),
-		path("login/", views.login_view, name&#x3D;"login"),
-		path("logout/", views.logout_view, name&#x3D;"logout"),
-		path("signup/", views.signup, name&#x3D;"signup"),
-		path("", views.concerts, name&#x3D;"concerts"),
+	urlpatterns = [
+		re_path(r"^$", views.index, name="index"),
+		path("songs", views.songs, name="songs"),
+		path("photos", views.photos, name="photos"),
+		path("login/", views.login_view, name="login"),
+		path("logout/", views.logout_view, name="logout"),
+		path("signup/", views.signup, name="signup"),
+		path("", views.concerts, name="concerts"),
 		...
 	]
 	```
 1. Replace the first empty string for the concert urlpattern with `concert/`.
 	```
-	path("concert/", views.concerts, name&#x3D;"concerts"),
+	path("concert/", views.concerts, name="concerts"),
 	```
 
 1. If you click the `Concert` link now after logging in as a valid user, you will get an error. However, again, you have made progress and we will fix this error in the next Task.
@@ -699,14 +699,14 @@ The Concert link is working, but the view is still broken. Open the `Back-end-De
 1. This view will first check if the user is authenticated and if so, show the list of concerts to the user by rendering the `concerts.html` template with the appropriate data. We have provided the following skeleton code to get you started:
 	```
 	if {insert code to check if the user is authenticated}:
-        lst_of_concert &#x3D; {insert code to create an empty list}
-        concert_objects &#x3D; {insert code to get all Concerts using the Concert.objects object}
+        lst_of_concert = {insert code to create an empty list}
+        concert_objects = {insert code to get all Concerts using the Concert.objects object}
         {insert code to loop through all items in the concert_objects}:
             try:
-                status &#x3D; item.attendee.filter(
-                    user&#x3D;request.user).first().attending
+                status = item.attendee.filter(
+                    user=request.user).first().attending
             except:
-                status &#x3D; "-"
+                status = "-"
             lst_of_concert.append({
                 "concert": item,
                 "status": status
@@ -727,14 +727,14 @@ Notice that the concert details are not showing up. You will fix this in the nex
 	```
 	def concerts(request):
 		if request.user.is_authenticated:
-			lst_of_concert &#x3D; []
-			concert_objects &#x3D; Concert.objects.all()
+			lst_of_concert = []
+			concert_objects = Concert.objects.all()
 			for item in concert_objects:
 				try:
-					status &#x3D; item.attendee.filter(
-						user&#x3D;request.user).first().attending
+					status = item.attendee.filter(
+						user=request.user).first().attending
 				except:
-					status &#x3D; "-"
+					status = "-"
 				lst_of_concert.append({
 					"concert": item,
 					"status": status

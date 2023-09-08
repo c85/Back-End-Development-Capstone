@@ -1,6 +1,6 @@
 # Create Band Website with Django
 
-![]https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-CD0320EN-SkillsNetwork/images/IDSN-logo.png
+![](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-CD0320EN-SkillsNetwork/images/IDSN-logo.png)
 
 **Estimated time needed**: 90 minutes
 
@@ -36,18 +36,18 @@ It is important to understand that the lab environment is ephemeral. It only liv
 Also, note that this environment is shared and, therefore, not secure. You should not store any personal information, usernames, passwords, or access tokens in this environment for any purpose.
 
 ## Your Task
-If you haven\&#x27;t generated a GitHub Personal Access Token you should do so now. You will need it to push code back to your repository. It should have &#x60;repo&#x60; and &#x60;write&#x60; permissions, and be set to expire in &#x60;60&#x60; days. When Git prompts you for a password in the Cloud IDE environment, use your Personal Access Token instead. Follow the steps in the [Generating Git Token Lab](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-CD0320EN-SkillsNetwork/labs/deployment/git_token.md.html &quot;Generating Git Token Lab&quot;) for detailed instructions.
+If you haven't generated a GitHub Personal Access Token you should do so now. You will need it to push code back to your repository. It should have `repo` and `write` permissions, and be set to expire in `60` days. When Git prompts you for a password in the Cloud IDE environment, use your Personal Access Token instead. Follow the steps in the [Generating Git Token Lab](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-CD0320EN-SkillsNetwork/labs/deployment/git_token.md.html) for detailed instructions.
 
 The environment may be recreated at any time, so you may find that you have to perform the Initialize Development Environment each time the environment is created.
 
 ## Note on Screenshots
 Throughout this lab, you will be prompted to take screenshots and save them on your device. You will need these screenshots to either answer graded quiz questions or upload the screenshots as your submission for peer review at the end of this course. Your screenshot must have either the .jpg or .png extension.
 
-To take screenshots, you can use various free screen-capture tools or your operating system&#x27;s shortcut keys. For example:
+To take screenshots, you can use various free screen-capture tools or your operating system's shortcut keys. For example:
 
-- Mac: you can use &#x60;Shift + Command + 3 (⇧ + ⌘ + 3)&#x60; on your keyboard to capture your entire screen, or &#x60;Shift + Command + 4 (⇧ + ⌘ + 4)&#x60; to capture a window or area. It will be saved as a .jpg or .png file on your Desktop.
+- Mac: you can use `Shift + Command + 3 (⇧ + ⌘ + 3)` on your keyboard to capture your entire screen, or `Shift + Command + 4 (⇧ + ⌘ + 4)` to capture a window or area. It will be saved as a .jpg or .png file on your Desktop.
 
-- Windows: you can capture your active window by pressing &#x60;Alt + Print Screen&#x60; on your keyboard. This command copies an image of your active window to the clipboard. Next, open an image editor, paste the image from your clipboard to the image editor, and save the image as .jpg or .png.
+- Windows: you can capture your active window by pressing `Alt + Print Screen` on your keyboard. This command copies an image of your active window to the clipboard. Next, open an image editor, paste the image from your clipboard to the image editor, and save the image as .jpg or .png.
 
 ## Create New Repository from Template
 
@@ -56,17 +56,17 @@ To take screenshots, you can use various free screen-capture tools or your opera
 
 	**Do not use Fork; use the Template button.**
 
-	![Create new repository from template](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-CD0320EN-SkillsNetwork/images/django-fork-template.png &quot;Create new repository from template&quot;)
+	![Create new repository from template](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-CD0320EN-SkillsNetwork/images/django-fork-template.png)
 
-3. Give your repository the name &#x60;Back-end-Development-Capstone&#x60;. This is the name that graders will be looking for to grade your work.
-4. Ensure you select the &#x60;Public&#x60; option for your repository and then create it.
+3. Give your repository the name `Back-end-Development-Capstone`. This is the name that graders will be looking for to grade your work.
+4. Ensure you select the `Public` option for your repository and then create it.
 
 ## Evidence
-1. Note down the URL of your GitHub repository (not the template) to submit for peer review. Recall the graders are looking for a repository named &#x60;Back-end-Development-Capstone&#x60; in your account.
+1. Note down the URL of your GitHub repository (not the template) to submit for peer review. Recall the graders are looking for a repository named `Back-end-Development-Capstone` in your account.
 
 ## Initialize Development Environment
 
-Because the Cloud IDE environment is ephemeral, it may be deleted at any time. The next time you come into the lab, a new environment may be created. Unfortunately, this means that you will need to initialize your development environment every time it is recreated. This shouldn\&#x27;t happen too often as the environment can last for several days at a time, but when it is removed, this is the procedure to recreate it.
+Because the Cloud IDE environment is ephemeral, it may be deleted at any time. The next time you come into the lab, a new environment may be created. Unfortunately, this means that you will need to initialize your development environment every time it is recreated. This shouldn't happen too often as the environment can last for several days at a time, but when it is removed, this is the procedure to recreate it.
 
 ## Overview
 Each time you need to set up your lab development environment, you will need to run three commands.
@@ -75,87 +75,87 @@ Each command will be explained in further detail, one at a time.
 
 The commands include:
 
-&#x60;&#x60;&#x60;
+```
 git clone https://github.com/$GITHUB_ACCOUNT/Back-end-Development-Capstone.git
 cd /home/project/Back-end-Development-Capstone
 bash ./bin/setup.sh
 exit
-&#x60;&#x60;&#x60;
+```
 
-Now, let\&#x27;s discuss each of these commands and explain what needs to be done.
+Now, let's discuss each of these commands and explain what needs to be done.
 
 ## Task 1 - Clone the repository
 Initialize your environment using the following steps:
 
-1. Open a terminal with &#x60;Terminal&#x60; &gt; &#x60;New Terminal&#x60; if one is not open already.
+1. Open a terminal with `Terminal` &gt; `New Terminal` if one is not open already.
 
 2. Next, use the export GITHUB_ACCOUNT command to export an environment variable that contains the name of your GitHub account.
 
    &gt; **Note:** Substitute your real GitHub account for the {your_github_account} placeholder below:
 
-&#x60;&#x60;&#x60;bash
+```bash
 export GITHUB_ACCOUNT&#x3D;{your_github_account}
-&#x60;&#x60;&#x60;
+```
 
 3. Then use the following commands to clone your repository.
 
-&#x60;&#x60;&#x60;bash
+```bash
 git clone https://github.com/$GITHUB_ACCOUNT/Back-end-Development-Capstone.git
-&#x60;&#x60;&#x60;
+```
 
 ## Task 2 - Initialize the development environment
 
-4. Change to the Back-end-Development-Capstone directory, and execute the &#x60;./bin/setup.sh&#x60; command.
-&#x60;&#x60;&#x60;bash
+4. Change to the Back-end-Development-Capstone directory, and execute the `./bin/setup.sh` command.
+```bash
 cd /home/project/Back-end-Development-Capstone
 bash ./bin/setup.sh
-&#x60;&#x60;&#x60;
+```
 
 5. You should see the follow at the end of the setup execution:
 
-	![setup script done](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-CD0320EN-SkillsNetwork/images/get_pics_setup_done.png &quot;setup script done&quot;)
+	![setup script done](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-CD0320EN-SkillsNetwork/images/get_pics_setup_done.png)
 
-6. Finally, use the &#x60;exit&#x60; command to close the current terminal. The environment will not be fully active until you open a new terminal in the next step.
+6. Finally, use the `exit` command to close the current terminal. The environment will not be fully active until you open a new terminal in the next step.
 
-&#x60;&#x60;&#x60;bash
+```bash
 exit
-&#x60;&#x60;&#x60;
+```
 
 ## Validate
-To validate that your environment is working correctly, you must open a new terminal because the Python virtual environment will only activate when a new terminal is created. You should have ended the previous task by using the &#x60;exit&#x60; command to exit the terminal.
+To validate that your environment is working correctly, you must open a new terminal because the Python virtual environment will only activate when a new terminal is created. You should have ended the previous task by using the `exit` command to exit the terminal.
 
-1. Open a terminal with &#x60;Terminal&#x60; &gt; &#x60;New Terminal&#x60; and check that everything worked correctly by using the &#x60;which python&#x60; command:
+1. Open a terminal with `Terminal` &gt; `New Terminal` and check that everything worked correctly by using the `which python` command:
 
 	Check which Python you are using:
 
-	&#x60;&#x60;&#x60;bash
+	```bash
 	which python
-	&#x60;&#x60;&#x60;&#x60;
+	````
 
 	You should get back:
 
-	&#x60;&#x60;&#x60;
+	```
 	(backend-django-venv) theia:project$ which python
 	/home/theia/backend-django-venv/bin/python
-	&#x60;&#x60;&#x60;
+	```
 
 	Check the Python version:
 
-	&#x60;&#x60;&#x60;bash
+	```bash
 	python --version
-	&#x60;&#x60;&#x60;
+	```
 
 	You should get back some patch level of Python 3.8:
 
-	&#x60;&#x60;&#x60;
+	```
 	Python 3.8.0
-	&#x60;&#x60;&#x60;
+	```
 
 This completes the setup of the development environment. Anytime your environment is recreated, you will need to follow this procedure.
 
 ## Project Overview
 
-You created the &#x60;songs&#x60; and the &#x60;photos&#x60; microservices in the last two modules. You are now asked to create the main &#x60;Django&#x60; website for the band. An incomplete template has been provided by the previous developer. You have already created a repository in your GitHub account from this template. You will now complete the following exercises to run this Django application locally in the lab environment.
+You created the `songs` and the `photos` microservices in the last two modules. You are now asked to create the main `Django` website for the band. An incomplete template has been provided by the previous developer. You have already created a repository in your GitHub account from this template. You will now complete the following exercises to run this Django application locally in the lab environment.
 
 ## Exercise 1: Complete Django Data Models
 
@@ -166,7 +166,7 @@ There are several commands which you will use to interact with migrations and Dj
 - **migrate**, responsible for applying and dissociating migrations.
 - **makemigrations**, responsible for creating new migrations based on the changes you have made to your models.
 - **sqlmigrate**, displays the SQL statements for a migration.
-- **showmigrations**, lists a project\&#x27;s migrations and their status.
+- **showmigrations**, lists a project's migrations and their status.
 
 Before you make and run migrations, you need to finish the data models in the code. The classes are provided and you will fill out the data types in this exercise.
 
@@ -175,52 +175,52 @@ Before you make and run migrations, you need to finish the data models in the co
 ### Task 1: Create a branch to work on
 
 1. Change into the project directory.
-	&#x60;&#x60;&#x60;bash
+	```bash
 	cd /home/project/Back-end-Development-Capstone
-	&#x60;&#x60;&#x60;
+	```
 
 1. Since you are working in GitHub, you must pull the latest changes from the main branch to stay up to date. You can then create a new branch.
 
 	The steps are:
-	&#x60;&#x60;&#x60;
+	```
 	git checkout main
 	git pull
 	git checkout -b backend-rest
-	&#x60;&#x60;&#x60;
+	```
 
 	&gt; This will switch to the main branch, pull the latest changes, and create a new branch. You will be asked to push all your changes to your GitHub repo and merge all code back into your main branch with a pull request.
 
-You can use the &#x60;git branch&#x60; command to see your current branch:
-&#x60;&#x60;&#x60;bash
+You can use the `git branch` command to see your current branch:
+```bash
 git branch
-&#x60;&#x60;&#x60;
+```
 
 Your output should look something like this:
-&#x60;&#x60;&#x60;
+```
 $ git branch
 * backend-rest
   main
-&#x60;&#x60;&#x60;
+```
 
 ### Task 2: Complete the data model classes
-Open the &#x60;Back-end-Development-Capstone/concert/models.py&#x60; file in the editor.
+Open the `Back-end-Development-Capstone/concert/models.py` file in the editor.
 
-1. You will notice that the previous developer left the &#x60;Concert&#x60; model properties commented out.
-	&#x60;&#x60;&#x60;
+1. You will notice that the previous developer left the `Concert` model properties commented out.
+	```
 	class Concert(models.Model):
 		# concert_name
 		# duration
 		# city
 		# date
-	&#x60;&#x60;&#x60;
-1. Let\&#x27;s add these properites with the following attributes:
-	- &#x60;concert_name&#x60;: CharField with a max_length of 255
-	- &#x60;duration&#x60;: an IntegerField
-	- &#x60;city&#x60;: CharField with a max_length of 255
-	- &#x60;date&#x60;: DateField with the default time of now
+	```
+1. Let's add these properites with the following attributes:
+	- `concert_name`: CharField with a max_length of 255
+	- `duration`: an IntegerField
+	- `city`: CharField with a max_length of 255
+	- `date`: DateField with the default time of now
 
-1. Similarly, you will notice the &#x60;Photo&#x60; model commented out:
-	&#x60;&#x60;&#x60;
+1. Similarly, you will notice the `Photo` model commented out:
+	```
 	class Photo(models.Model):
 		# id
 		# pic_url
@@ -228,40 +228,33 @@ Open the &#x60;Back-end-Development-Capstone/concert/models.py&#x60; file in the
 		# event_state
 		# event_city
 		# event_date
-	&#x60;&#x60;&#x60;
+	```
 
 1. You will fill it out with the following attributes:
-	- &#x60;id&#x60;: IntegerField as a primary key
-	- &#x60;pic_url&#x60;: CharField with max_length of 1000
-	- &#x60;event_country&#x60;: CharField with max_length of 255
-	- &#x60;event_state&#x60;: CharField with max_length of 255
-	- &#x60;event_city&#x60;: CharField with max_length of 255
-	- &#x60;event_date&#x60;: DateField with the default time of now
+	- `id`: IntegerField as a primary key
+	- `pic_url`: CharField with max_length of 1000
+	- `event_country`: CharField with max_length of 255
+	- `event_state`: CharField with max_length of 255
+	- `event_city`: CharField with max_length of 255
+	- `event_date`: DateField with the default time of now
 
-1. Finally, the &#x60;Song&#x60;model also needs all the attributes as follows:
-	- &#x60;id&#x60;: IntegerField as a primary key
-	- &#x60;title&#x60;: CharField with max_length of 255
-	- &#x60;lyrics&#x60;: TextField
+1. Finally, the `Song`model also needs all the attributes as follows:
+	- `id`: IntegerField as a primary key
+	- `title`: CharField with max_length of 255
+	- `lyrics`: TextField
 
 ## Solutions
-1. &#x60;Concert&#x60; model should look as follows:
-	&lt;details&gt;
-		&lt;summary&gt;Click here for the solution.&lt;/summary&gt;
-
-	&#x60;&#x60;&#x60;
+1. `Concert` model should look as follows:
+	```
 	class Concert(models.Model):
 		concert_name &#x3D; models.CharField(max_length&#x3D;255)
 		duration &#x3D; models.IntegerField()
 		city &#x3D; models.CharField(max_length&#x3D;255)
 		date &#x3D; models.DateField(default&#x3D;datetime.now)
-	&#x60;&#x60;&#x60;
-	&lt;/details&gt;
+	```
 
-1. &#x60;Photo&#x60; model should look as follows:
-	&lt;details&gt;
-		&lt;summary&gt;Click here for the solution.&lt;/summary&gt;
-
-	&#x60;&#x60;&#x60;
+1. `Photo` model should look as follows:
+	```
 	class Photo(models.Model):
 		id &#x3D; models.IntegerField(primary_key&#x3D;True)
 		pic_url &#x3D; models.CharField(max_length&#x3D;1000)
@@ -270,43 +263,31 @@ Open the &#x60;Back-end-Development-Capstone/concert/models.py&#x60; file in the
 		event_city &#x3D; models.CharField(max_length&#x3D;255)
 		event_date &#x3D; models.DateField(default&#x3D;datetime.now)
 
-	&#x60;&#x60;&#x60;
-	&lt;/details&gt;
+	```
 
-1. &#x60;Song&#x60; model should look as follows:
-	&lt;details&gt;
-		&lt;summary&gt;Click here for the solution.&lt;/summary&gt;
-
-	&#x60;&#x60;&#x60;
+1. `Song` model should look as follows:
+	```
 	class Song(models.Model):
 		id &#x3D; models.IntegerField(primary_key&#x3D;True)
 		title &#x3D; models.CharField(max_length&#x3D;255)
 		lyrics &#x3D; models.TextField()
 
-	&#x60;&#x60;&#x60;
-	&lt;/details&gt;
+	```
 
 ### Task 3: Make and run migrations
-1. Create the initial migrations using the &#x60;makemigrations&#x60; command.
-	&lt;details&gt;
-		&lt;summary&gt;Click here for a hint.&lt;/summary&gt;
-
-	&#x60;&#x60;&#x60;bash
+1. Create the initial migrations using the `makemigrations` command.
+	```bash
 	python manage.py makemigrations
-	&#x60;&#x60;&#x60;
-	&lt;/details&gt;
-1. Run the migrate command for the migrations you just created.
-	&lt;details&gt;
-		&lt;summary&gt;Click here for a hint.&lt;/summary&gt;
+	```
 
-	&#x60;&#x60;&#x60;bash
+1. Run the migrate command for the migrations you just created.
+	```bash
 	python manage.py migrate
-	&#x60;&#x60;&#x60;
-	&lt;/details&gt;
+	```
 
 ## Evidence
-1. Take a screenshot of the terminal after executing the &#x60;migrate&#x60; command.
-2. Save the screenshot as &#x60;django-migrate.jpg&#x60; (or &#x60;.png&#x60;).
+1. Take a screenshot of the terminal after executing the `migrate` command.
+2. Save the screenshot as `django-migrate.jpg` (or `.png`).
 
 
 ## Exercise 2: Run the Django App in the Lab Environment
@@ -314,344 +295,311 @@ Open the &#x60;Back-end-Development-Capstone/concert/models.py&#x60; file in the
 Before you proceed with the rest of the backend exercises, you can run the application locally in the lab enivonrment and see the home page.
 
 ## Your Tasks
-1. Run the &#x60;runserver&#x60; command to run the application locally.
-	&lt;details&gt;
-		&lt;summary&gt;Click here for a hint.&lt;/summary&gt;
-
-	&#x60;&#x60;&#x60;bash
+1. Run the `runserver` command to run the application locally.
+	```bash
 	python manage.py runserver
-	&#x60;&#x60;&#x60;
-	&lt;/details&gt;
+	```
 	This should start the Django server at port 8000.
-1. Curl &#x60;localhost:8000&#x60; to see if you get a 200 HTTP code from the running server. Note that you are already running the server in the terminal. Open a new terminal or split the existing terminal to execute the curl command:
-	&#x60;&#x60;&#x60;bash
-	curl -s -o /dev/null -w &quot;%{http_code}&quot; http://localhost:8000
-	&#x60;&#x60;&#x60;
-	You should see an output of &#x60;200&#x60;:
-	&#x60;&#x60;&#x60;
-	(venv) theia:project$ curl -s -o /dev/null -w &quot;%{http_code}&quot; http://localhost:8000
+1. Curl `localhost:8000` to see if you get a 200 HTTP code from the running server. Note that you are already running the server in the terminal. Open a new terminal or split the existing terminal to execute the curl command:
+	```bash
+	curl -s -o /dev/null -w "%{http_code}" http://localhost:8000
+	```
+	You should see an output of `200`:
+	```
+	(venv) theia:project$ curl -s -o /dev/null -w "%{http_code}" http://localhost:8000
 
 	200(venv)
-	&#x60;&#x60;&#x60;
-1. If you got 200 OK, you can proceed to launch the application by clicking &#x60;Launch Applciation&#x60; icon on the left bar. Once the tab opens, you can enter port as &#x60;8000&#x60; and click the &#x60;Your Application&#x60; button.
+	```
+1. If you got 200 OK, you can proceed to launch the application by clicking `Launch Applciation` icon on the left bar. Once the tab opens, you can enter port as `8000` and click the `Your Application` button.
 
-	![Launch Django App Locally](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-CD0320EN-SkillsNetwork/images/django-app-local-launch.png &quot;Launch Django App Locally&quot;)
+	![Launch Django App Locally](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-CD0320EN-SkillsNetwork/images/django-app-local-launch.png)
 
 	You should see the application open in a new tab. Note that none of the links on the top of the page are working. The remaining exercises in the lab will guide you on how to get these links and the admin site working.
-	![Django Application Running Locally](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-CD0320EN-SkillsNetwork/images/djang-app-tab.png &quot;Django Application Running Locally&quot;)
+	![Django Application Running Locally](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-CD0320EN-SkillsNetwork/images/djang-app-tab.png)
 
 ## Evidence
 1. Take a screenshot of the browser running your application.
-2. Save the screenshot as &#x60;django-app-browser.jpg&#x60; (or &#x60;.png&#x60;).
+2. Save the screenshot as `django-app-browser.jpg` (or `.png`).
 
 ## Exercise 3: Fix Songs page
 
-The &#x60;Songs&#x60; page displays all songs and lyrics for each when the user clicks on a song title. Currently, there is no URL mapped to the songs method in the view file. All the URLs are stored in &#x60;concert/urls.py&#x60; file. You need to add the URL for the songs.
+The `Songs` page displays all songs and lyrics for each when the user clicks on a song title. Currently, there is no URL mapped to the songs method in the view file. All the URLs are stored in `concert/urls.py` file. You need to add the URL for the songs.
 
 ## Your Tasks
 
 ### Task 1 : Fix songs URL
 
-Open the &#x60;Back-end-Development-Capstone/concert/urls.py&#x60; file in the editor.
+Open the `Back-end-Development-Capstone/concert/urls.py` file in the editor.
 
 1. You should see all the URLs defined in this file:
-	&#x60;&#x60;&#x60;
+	```
 	urlpatterns &#x3D; [
-		re_path(r&quot;^$&quot;, views.index, name&#x3D;&quot;index&quot;),
-		path(&quot;&quot;, views.songs, name&#x3D;&quot;songs&quot;),
+		re_path(r"^$", views.index, name&#x3D;"index"),
+		path("", views.songs, name&#x3D;"songs"),
 		...
 	]
-	&#x60;&#x60;&#x60;
-1. Replace the first empty string for the songs urlpattern with &#x60;song/&#x60;
-	&lt;details&gt;
-	&lt;summary&gt;Click here for a hint.&lt;/summary&gt;
-
-	&#x60;&#x60;&#x60;bash
-	path(&quot;songs/&quot;, views.songs, name&#x3D;&quot;songs&quot;),
-	&#x60;&#x60;&#x60;
-	&lt;/details&gt;
+	```
+1. Replace the first empty string for the songs urlpattern with `song/`
+	```bash
+	path("songs/", views.songs, name&#x3D;"songs"),
+	```
 
 1. If you click on the songs link now, you will get an error. However, you have made progress. Instead of the link not working at all, you are one step closer to getting it to work.
 
 
 ### Task 2 : Fix songs view
 
-The songs link is working, but the view is still broken. Open the &#x60;Back-end-Development-Capstone/concert/views.py&#x60; file in the editor.
+The songs link is working, but the view is still broken. Open the `Back-end-Development-Capstone/concert/views.py` file in the editor.
 
-1. Go to the method named &#x60;songs&#x60;.
-	&#x60;&#x60;&#x60;
+1. Go to the method named `songs`.
+	```
 	def songs(request):
-		# songs &#x3D; {&quot;songs&quot;:[]}
-		# return render(request, &quot;songs.html&quot;, {&quot;songs&quot;: [insert list here]})
+		# songs &#x3D; {"songs":[]}
+		# return render(request, "songs.html", {"songs": [insert list here]})
 		pass
-	&#x60;&#x60;&#x60;
-1. You will eventually hook this method with the song microservice you created in the previous lab. For now, let\&#x27;s return the following dummy data back to the &#x60;songs.html&#x60; template.
-	&#x60;&#x60;&#x60;
-	[{&quot;id&quot;:1,&quot;title&quot;:&quot;duis faucibus accumsan odio curabitur convallis&quot;,&quot;lyrics&quot;:&quot;Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.&quot;}]
-	&#x60;&#x60;&#x60;
+	```
+1. You will eventually hook this method with the song microservice you created in the previous lab. For now, let's return the following dummy data back to the `songs.html` template.
+	```
+	[{"id":1,"title":"duis faucibus accumsan odio curabitur convallis","lyrics":"Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis."}]
+	```
 
-	&lt;details&gt;
-		&lt;summary&gt;Click here for a hint.&lt;/summary&gt;
-
-	&#x60;&#x60;&#x60;
+	```
 	def songs(request):
-		songs &#x3D; {&quot;songs&quot;:[{&quot;id&quot;:1,&quot;title&quot;:&quot;duis faucibus accumsan odio curabitur convallis&quot;,&quot;lyrics&quot;:&quot;Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.&quot;}]}
-		return render(request, &quot;songs.html&quot;, {&quot;songs&quot;:songs[&quot;songs&quot;]})
-	&#x60;&#x60;&#x60;
-	&gt; Note that you also need to remove the &#x60;pass&#x60; statement from the last line of the method.
-	&lt;/details&gt;
+		songs &#x3D; {"songs":[{"id":1,"title":"duis faucibus accumsan odio curabitur convallis","lyrics":"Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis."}]}
+		return render(request, "songs.html", {"songs":songs["songs"]})
+	```
+	&gt; Note that you also need to remove the `pass` statement from the last line of the method.
 
-1. You should now see a song dislayed when you click the &#x60;Songs&#x60; page.
+1. You should now see a song dislayed when you click the `Songs` page.
 
-	![Songs page working in django](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-CD0320EN-SkillsNetwork/images/django-songs-page-working.png &quot;Songs page working in django&quot;)
+	![Songs page working in django](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-CD0320EN-SkillsNetwork/images/django-songs-page-working.png)
 
 1. You should also see the lyrics pop up when you click the song.
-	![Songs lyrics modal working](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-CD0320EN-SkillsNetwork/images/djang-songs-modal-working.png &quot;Songs lyrics modal working&quot;)
+	![Songs lyrics modal working](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-CD0320EN-SkillsNetwork/images/djang-songs-modal-working.png)
 
 ## Evidence
 1. Take a screenshot of your application showing the modal dialog along with the single song in the backgroud.
-2. Save the screenshot as &#x60;django-song-modal.jpg&#x60; (or &#x60;.png&#x60;).
+2. Save the screenshot as `django-song-modal.jpg` (or `.png`).
 
 ## Exercise 4: Fix Photos page
 
-The &#x60;Photos&#x60; page displays pictures from past events by the band in different cities across the world. Currently, there is no URL mapped to the photos method in the view file. All the URLs are stored in &#x60;concert/urls.py&#x60; file. You need to add the URL for the photos.
+The `Photos` page displays pictures from past events by the band in different cities across the world. Currently, there is no URL mapped to the photos method in the view file. All the URLs are stored in `concert/urls.py` file. You need to add the URL for the photos.
 
 ## Your Tasks
 
 ### Task 1 : Fix photos URL
 
-Open the &#x60;Back-end-Development-Capstone/concert/urls.py&#x60; file in the editor.
+Open the `Back-end-Development-Capstone/concert/urls.py` file in the editor.
 
 1. You should see all the URLs defined in this file:
-	&#x60;&#x60;&#x60;
+	```
 	urlpatterns &#x3D; [
-		re_path(r&quot;^$&quot;, views.index, name&#x3D;&quot;index&quot;),
-		path(&quot;songs&quot;, views.songs, name&#x3D;&quot;songs&quot;),
-		path(&quot;&quot;, views.photos, name&#x3D;&quot;photos&quot;),
+		re_path(r"^$", views.index, name&#x3D;"index"),
+		path("songs", views.songs, name&#x3D;"songs"),
+		path("", views.photos, name&#x3D;"photos"),
 		...
 	]
-	&#x60;&#x60;&#x60;
-1. Replace the first empty string for the photos urlpattern with &#x60;photos&#x60;.
-	&lt;details&gt;
-	&lt;summary&gt;Click here for a hint.&lt;/summary&gt;
-
-	&#x60;&#x60;&#x60;bash
-	path(&quot;photos/&quot;, views.photos, name&#x3D;&quot;photos&quot;),
-	&#x60;&#x60;&#x60;
-	&lt;/details&gt;
+	```
+1. Replace the first empty string for the photos urlpattern with `photos`.
+	```bash
+	path("photos/", views.photos, name&#x3D;"photos"),
+	```
 
 1. If you click on the photos link now, you will get an error. However, again, you have made progress.
 
 
 ### Task 1 : Fix photos view
-The photos link is working, but the view is still broken. Open the &#x60;Back-end-Development-Capstone/concert/views.py&#x60; file in the editor.
+The photos link is working, but the view is still broken. Open the `Back-end-Development-Capstone/concert/views.py` file in the editor.
 
-1. Go to the method named &#x60;photos&#x60;.
-	&#x60;&#x60;&#x60;
+1. Go to the method named `photos`.
+	```
 	def photos(request):
 		# photos &#x3D; None
-		# return render(request, &quot;photos.html&quot;, {&quot;photos&quot;: photos})
+		# return render(request, "photos.html", {"photos": photos})
 		pass
-	&#x60;&#x60;&#x60;
-1. You will eventually hook this method with the pictures microservice you created in the previous lab. For now, let&#x27;s return the following dummy data back to the &#x60;photo.html&#x60; template.
-	&#x60;&#x60;&#x60;
+	```
+1. You will eventually hook this method with the pictures microservice you created in the previous lab. For now, let's return the following dummy data back to the `photo.html` template.
+	```
 	[{
-        &quot;id&quot;: 1,
-        &quot;pic_url&quot;: &quot;http://dummyimage.com/136x100.png/5fa2dd/ffffff&quot;,
-        &quot;event_country&quot;: &quot;United States&quot;,
-        &quot;event_state&quot;: &quot;District of Columbia&quot;,
-        &quot;event_city&quot;: &quot;Washington&quot;,
-        &quot;event_date&quot;: &quot;11/16/2022&quot;
+        "id": 1,
+        "pic_url": "http://dummyimage.com/136x100.png/5fa2dd/ffffff",
+        "event_country": "United States",
+        "event_state": "District of Columbia",
+        "event_city": "Washington",
+        "event_date": "11/16/2022"
     }]
-	&#x60;&#x60;&#x60;
+	```
 
-	&lt;details&gt;
-	&lt;summary&gt;Click here for a hint.&lt;/summary&gt;
-
-	&#x60;&#x60;&#x60;
+	```
 	def photos(request):
 		photos &#x3D; [{
-		&quot;id&quot;: 1,
-		&quot;pic_url&quot;: &quot;http://dummyimage.com/136x100.png/5fa2dd/ffffff&quot;,
-		&quot;event_country&quot;: &quot;United States&quot;,
-		&quot;event_state&quot;: &quot;District of Columbia&quot;,
-		&quot;event_city&quot;: &quot;Washington&quot;,
-		&quot;event_date&quot;: &quot;11/16/2022&quot;
+		"id": 1,
+		"pic_url": "http://dummyimage.com/136x100.png/5fa2dd/ffffff",
+		"event_country": "United States",
+		"event_state": "District of Columbia",
+		"event_city": "Washington",
+		"event_date": "11/16/2022"
 		}]
-		return render(request, &quot;photos.html&quot;, {&quot;photos&quot;: photos})
-	&#x60;&#x60;&#x60;
-	&gt; Note that you also need to remove the &#x60;pass&#x60; statement from the last line of the method.
-	&lt;/details&gt;
+		return render(request, "photos.html", {"photos": photos})
+	```
+	&gt; Note that you also need to remove the `pass` statement from the last line of the method.
 
-1. You should now see a photo dislayed when you click the &#x60;photos&#x60; page
+1. You should now see a photo dislayed when you click the `photos` page
 
-	![Working photos page](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-CD0320EN-SkillsNetwork/images/django-photos-page-working.png &quot;Working photos page&quot;)
+	![Working photos page](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-CD0320EN-SkillsNetwork/images/django-photos-page-working.png)
 
 
 ## Evidence
 1. Take a screenshot of your application showing the single photo in the photos page.
-2. Save the screenshot as &#x60;django-photos.jpg&#x60; (or &#x60;.png&#x60;).
+2. Save the screenshot as `django-photos.jpg` (or `.png`).
 
 
 ## Exercise 5: Fix the Sign Up flow
 
-The &#x60;Signup&#x60; flow allows the user to create an account with the site so they can book concerts.
+The `Signup` flow allows the user to create an account with the site so they can book concerts.
 
 ## Your Tasks
 
-### Task 1 : Fix &#x60;signup&#x60; URL
+### Task 1 : Fix `signup` URL
 
-Open the &#x60;Back-end-Development-Capstone/concert/urls.py&#x60; file in the editor.
+Open the `Back-end-Development-Capstone/concert/urls.py` file in the editor.
 
 1. You should see all the URLs defined in this file:
-	&#x60;&#x60;&#x60;
+	```
 	urlpatterns &#x3D; [
-		re_path(r&quot;^$&quot;, views.index, name&#x3D;&quot;index&quot;),
-		path(&quot;songs&quot;, views.songs, name&#x3D;&quot;songs&quot;),
-		path(&quot;photos&quot;, views.photos, name&#x3D;&quot;photos&quot;),
-		path(&quot;&quot;, views.login_view, name&#x3D;&quot;login&quot;),
-		path(&quot;&quot;, views.logout_view, name&#x3D;&quot;logout&quot;),
-		path(&quot;&quot;, views.signup, name&#x3D;&quot;signup&quot;),
+		re_path(r"^$", views.index, name&#x3D;"index"),
+		path("songs", views.songs, name&#x3D;"songs"),
+		path("photos", views.photos, name&#x3D;"photos"),
+		path("", views.login_view, name&#x3D;"login"),
+		path("", views.logout_view, name&#x3D;"logout"),
+		path("", views.signup, name&#x3D;"signup"),
 		...
 	]
-	&#x60;&#x60;&#x60;
-1. Replace the first empty string for the signup urlpattern with &#x60;signup/&#x60;.
-	&lt;details&gt;
-	&lt;summary&gt;Click here for a hint.&lt;/summary&gt;
+	```
+1. Replace the first empty string for the signup urlpattern with `signup/`.
+	```bash
+	path("signup/", views.signup, name&#x3D;"signup"),
+	```
 
-	&#x60;&#x60;&#x60;bash
-	path(&quot;signup/&quot;, views.signup, name&#x3D;&quot;signup&quot;),
-	&#x60;&#x60;&#x60;
-	&lt;/details&gt;
-
-1. If you were to click the &#x60;Signup&#x60; link now, you will get an error. However, again, you have made progress and we will fix this error in the next Task.
+1. If you were to click the `Signup` link now, you will get an error. However, again, you have made progress and we will fix this error in the next Task.
 
 
 ### Task 2 : Fix Signup View
-The Signup link is working, but the view is still broken. Open the &#x60;Back-end-Development-Capstone/concert/views.py&#x60; file in the editor.
+The Signup link is working, but the view is still broken. Open the `Back-end-Development-Capstone/concert/views.py` file in the editor.
 
-1. Go to the method named &#x60;signup&#x60;.
-	&#x60;&#x60;&#x60;
+1. Go to the method named `signup`.
+	```
 	def signup(request):
     	pass
-	&#x60;&#x60;&#x60;
-1. This view will handle both use cases when the user is asking for the signup form and also when the user is submitting the signup form after adding their details. Let\&#x27;s consider the first. You simply return &#x60;signup.html&#x60; template with the &#x60;SignUpForm&#x60; form.
-	&#x60;&#x60;&#x60;
-	return render(request, &quot;signup.html&quot;, {&quot;form&quot;: SignUpForm})
-	&#x60;&#x60;&#x60;
-1. The second case is a little more involved. You will have to check if the request is a &#x60;POST&#x60; request. A &#x60;POST&#x60; request will indicate the user submitted a form. There are a number of steps after this:
-	- get the &#x60;username&#x60; from the request.
-	- get the &#x60;password&#x60; from the request.
+	```
+1. This view will handle both use cases when the user is asking for the signup form and also when the user is submitting the signup form after adding their details. Let's consider the first. You simply return `signup.html` template with the `SignUpForm` form.
+	```
+	return render(request, "signup.html", {"form": SignUpForm})
+	```
+1. The second case is a little more involved. You will have to check if the request is a `POST` request. A `POST` request will indicate the user submitted a form. There are a number of steps after this:
+	- get the `username` from the request.
+	- get the `password` from the request.
 	- look for the user with this username.
-	- if the user already exists, return to &#x60;Signup&#x60;page with the message &#x60;user already exists&#x60;.
+	- if the user already exists, return to `Signup`page with the message `user already exists`.
 	- if the user does not exist, log in the user wih their new credentials, and return to the index page.
 
 	We have provided the following skeleton code to get you started:
-	&#x60;&#x60;&#x60;
-	if request.method &#x3D;&#x3D; &quot;POST&quot;:
+	```
+	if request.method &#x3D;&#x3D; "POST":
         username &#x3D; {insert code to get username from the request}
         password &#x3D; {insert code to get password from the request}
         try:
             user &#x3D; {insert code to find user using User.objects.filter method}
             if user:
-				return {insert code to render the signup.html page with the SignUpForm form and a message of &quot;user already exist&quot;}
+				return {insert code to render the signup.html page with the SignUpForm form and a message of "user already exist"}
             else:
                 user &#x3D; {insert code to create a new user using the User.objects.create method. Remmeber to use the make_password method to create the password securely}
                 {insert code to log in the user with the django.contrib.aut. module}
                 {insert code to return the user back to the index page}
         except User.DoesNotExist:
-            return {insert code to render the &#x27;signup.html&#x27; page with the &#x27;SignUpForm&#x27; form}
-    return {insert code to render the &#x27;signup.html&#x27; page with the &#x27;SignUpForm&#x27; form}
-	&#x60;&#x60;&#x60;
+            return {insert code to render the 'signup.html' page with the 'SignUpForm' form}
+    return {insert code to render the 'signup.html' page with the 'SignUpForm' form}
+	```
 
-1. If your code works without errors, you should now see a sign up form when you click the &#x60;signup&#x60; link.
+1. If your code works without errors, you should now see a sign up form when you click the `signup` link.
 
-	![Django Sign Up form working](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-CD0320EN-SkillsNetwork/images/django-signup-working.png &quot;Django Sign Up form working&quot;)
-1. You should be able to create a new user and sign in. However, once you have signed in, the &#x60;logout&#x60; link is still broken. We will fix that in the next exercise.
+	![Django Sign Up form working](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-CD0320EN-SkillsNetwork/images/django-signup-working.png)
+1. You should be able to create a new user and sign in. However, once you have signed in, the `logout` link is still broken. We will fix that in the next exercise.
 
 
 ## Final Solution
 1. Ensure your solution for the login_view method matches the following:
-	&lt;details&gt;
-	&lt;summary&gt;Click here for the solution.&lt;/summary&gt;
-
-	&#x60;&#x60;&#x60;
+	```
 	def signup(request):
-		if request.method &#x3D;&#x3D; &quot;POST&quot;:
-			username &#x3D; request.POST.get(&quot;username&quot;)
-			password &#x3D; request.POST.get(&quot;password&quot;)
+		if request.method &#x3D;&#x3D; "POST":
+			username &#x3D; request.POST.get("username")
+			password &#x3D; request.POST.get("password")
 			try:
 				user &#x3D; User.objects.filter(username&#x3D;username).first()
 				if user:
-					return render(request, &quot;signup.html&quot;, {&quot;form&quot;: SignUpForm, &quot;message&quot;: &quot;user already exist&quot;})
+					return render(request, "signup.html", {"form": SignUpForm, "message": "user already exist"})
 				else:
 					user &#x3D; User.objects.create(
 						username&#x3D;username, password&#x3D;make_password(password))
 					login(request, user)
-					return HttpResponseRedirect(reverse(&quot;index&quot;))
+					return HttpResponseRedirect(reverse("index"))
 			except User.DoesNotExist:
-				return render(request, &quot;signup.html&quot;, {&quot;form&quot;: SignUpForm})
-		return render(request, &quot;signup.html&quot;, {&quot;form&quot;: SignUpForm})
-	&#x60;&#x60;&#x60;
-	&lt;/details&gt;
-
+				return render(request, "signup.html", {"form": SignUpForm})
+		return render(request, "signup.html", {"form": SignUpForm})
+	```
 
 ## Exercise 6: Fix Login and Logout
 
-The &#x60;Login&#x60; flow allows the user to log in with their account. They are then able to see the concert page with a list of all concerts. The &#x60;Logout&#x60; flow will log the user out of the application. If you open the application in its current state, you will see the &#x60;Login&#x60; button, but nothing happens when you click it. Your task in this exercise is to fix both these views.
+The `Login` flow allows the user to log in with their account. They are then able to see the concert page with a list of all concerts. The `Logout` flow will log the user out of the application. If you open the application in its current state, you will see the `Login` button, but nothing happens when you click it. Your task in this exercise is to fix both these views.
 
 ## Your Tasks
 
 ### Task 1 : Fix Login and Logout URL
 
-Open the &#x60;Back-end-Development-Capstone/concert/urls.py&#x60; file in the editor.
+Open the `Back-end-Development-Capstone/concert/urls.py` file in the editor.
 
 1. You should see all URLs defined in this file:
-	&#x60;&#x60;&#x60;
+	```
 	urlpatterns &#x3D; [
-		re_path(r&quot;^$&quot;, views.index, name&#x3D;&quot;index&quot;),
-		path(&quot;songs&quot;, views.songs, name&#x3D;&quot;songs&quot;),
-		path(&quot;photos&quot;, views.photos, name&#x3D;&quot;photos&quot;),
-		path(&quot;&quot;, views.login_view, name&#x3D;&quot;login&quot;),
-		path(&quot;&quot;, views.logout_view, name&#x3D;&quot;logout&quot;),
+		re_path(r"^$", views.index, name&#x3D;"index"),
+		path("songs", views.songs, name&#x3D;"songs"),
+		path("photos", views.photos, name&#x3D;"photos"),
+		path("", views.login_view, name&#x3D;"login"),
+		path("", views.logout_view, name&#x3D;"logout"),
 		...
 	]
-	&#x60;&#x60;&#x60;
-1. Replace the first empty string for the login urlpattern with &#x60;login/&#x60; and the logout urlpattern with &#x60;logout/&#x60;.
-	&lt;details&gt;
-	&lt;summary&gt;Click here for a hint.&lt;/summary&gt;
+	```
+1. Replace the first empty string for the login urlpattern with `login/` and the logout urlpattern with `logout/`.
+	```
+	path("login/", views.login_view, name&#x3D;"login"),
+	path("logout/", views.logout_view, name&#x3D;"logout"),
+	```
 
-	&#x60;&#x60;&#x60;
-	path(&quot;login/&quot;, views.login_view, name&#x3D;&quot;login&quot;),
-	path(&quot;logout/&quot;, views.logout_view, name&#x3D;&quot;logout&quot;),
-	&#x60;&#x60;&#x60;
-	&lt;/details&gt;
-
-1. If you click the &#x60;Login&#x60; link now, you will get an error. However, again, you have made progress and we will fix this error in the next Task.
+1. If you click the `Login` link now, you will get an error. However, again, you have made progress and we will fix this error in the next Task.
 
 
 ### Task 2 : Fix Login View
-The Login link is working, but the view is still broken. Open the &#x60;Back-end-Development-Capstone/concert/views.py&#x60; file in the editor.
+The Login link is working, but the view is still broken. Open the `Back-end-Development-Capstone/concert/views.py` file in the editor.
 
-1. Go to the method named &#x60;login_view&#x60;.
-	&#x60;&#x60;&#x60;
+1. Go to the method named `login_view`.
+	```
 	def login_view(request):
     	pass
-	&#x60;&#x60;&#x60;
-1. This view will handle both use cases when the user is asking for the login form and also when the user is submitting a login form. Let&#x27;s consider the first. You simply return &#x60;login.html&#x60; template with the &#x60;LoginForm&#x60; form.
-	&#x60;&#x60;&#x60;
-	return render(request, &quot;login.html&quot;, {&quot;form&quot;: LoginForm})
-	&#x60;&#x60;&#x60;
-1. The second case is a little more involved. You will have to check if the request is a &#x60;POST&#x60; request. A &#x60;POST&#x60; request would indicate the user submitted a form. There are a number of steps after this:
-	- get the &#x60;username&#x60; from the request
-	- get the &#x60;password&#x60; from the request
+	```
+1. This view will handle both use cases when the user is asking for the login form and also when the user is submitting a login form. Let's consider the first. You simply return `login.html` template with the `LoginForm` form.
+	```
+	return render(request, "login.html", {"form": LoginForm})
+	```
+1. The second case is a little more involved. You will have to check if the request is a `POST` request. A `POST` request would indicate the user submitted a form. There are a number of steps after this:
+	- get the `username` from the request
+	- get the `password` from the request
 	- if the username and password are correct, send them to the index page
 	- if the username or password are incorrect, send them back to the login page
 
 	We have provided the following skeleton code to get you started:
-	&#x60;&#x60;&#x60;
-	if request.method &#x3D;&#x3D; &quot;POST&quot;:
-        if request.method &#x3D;&#x3D; &quot;POST&quot;:
+	```
+	if request.method &#x3D;&#x3D; "POST":
+        if request.method &#x3D;&#x3D; "POST":
         username &#x3D; {insert code to get username from the request}
         password &#x3D; {insert code to get password from the request}
         try:
@@ -659,110 +607,97 @@ The Login link is working, but the view is still broken. Open the &#x60;Back-end
 
             if {insert code to check the username and password}:
                 {insert code to log in the using the django.contrib.auth module}
-                return HttpResponseRedirect(reverse(&quot;index&quot;))
+                return HttpResponseRedirect(reverse("index"))
         except User.DoesNotExist:
-            return {insert code to render the &#x60;login.html&#x60; method using the &#x60;LoginForm&#x60; form}
-	&#x60;&#x60;&#x60;
+            return {insert code to render the `login.html` method using the `LoginForm` form}
+	```
 
-1. If your code works without errors, you should now see a login form when you click the &#x60;Login&#x60; button.
+1. If your code works without errors, you should now see a login form when you click the `Login` button.
 
-	![Django login link working](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-CD0320EN-SkillsNetwork/images/django-login-working.png &quot;Django login link working&quot;)
+	![Django login link working](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-CD0320EN-SkillsNetwork/images/django-login-working.png)
 
 	You can try logging in with the user you created in the previous task. Alternatively, you can sign up as a new user and log in to ensure your code works.
 
 ### Task 3 : Fix Logout View
-As noted in the previous exercise, the logout link is still broken. Open the &#x60;Back-end-Development-Capstone/concert/views.py&#x60; file in the editor.
+As noted in the previous exercise, the logout link is still broken. Open the `Back-end-Development-Capstone/concert/views.py` file in the editor.
 
-1. Go to the method named &#x60;logout_view&#x60;.
-	&#x60;&#x60;&#x60;
+1. Go to the method named `logout_view`.
+	```
 	def logout_view(request):
     	pass
-	&#x60;&#x60;&#x60;
-1. The logout view will simply log out the user using the &#x60;django.contrib.auth&#x60; module. Additionally, it will redirect the user to the login screen.
-	&lt;details&gt;
-	&lt;summary&gt;Click here for hint.&lt;/summary&gt;
-
-	&#x60;&#x60;&#x60;
+	```
+1. The logout view will simply log out the user using the `django.contrib.auth` module. Additionally, it will redirect the user to the login screen.
+	```
 	def logout_view(request):
 		{insert code to logout the user using the django.contrib.auth module}
 		{insert code to return the user to the login page using the HttpResponseRedirect module}
-	&#x60;&#x60;&#x60;
-	&lt;/details&gt;
+	```
 
-	You can test the logout flow by logging in and then clicking on the &#x60;Logout&#x60; button.
+	You can test the logout flow by logging in and then clicking on the `Logout` button.
 
 ## Final Solution
 1. Ensure your solution for the login_view method matches the following:
-	&lt;details&gt;
-	&lt;summary&gt;Click here for the solution.&lt;/summary&gt;
-
-	&#x60;&#x60;&#x60;
+	```
 	def login_view(request):
-		if request.method &#x3D;&#x3D; &quot;POST&quot;:
-			username &#x3D; request.POST.get(&quot;username&quot;)
-			password &#x3D; request.POST.get(&quot;password&quot;)
+		if request.method &#x3D;&#x3D; "POST":
+			username &#x3D; request.POST.get("username")
+			password &#x3D; request.POST.get("password")
 			try:
 				user &#x3D; User.objects.get(username&#x3D;username)
 
 				if user.check_password(password):
 					login(request, user)
-					return HttpResponseRedirect(reverse(&quot;index&quot;))
+					return HttpResponseRedirect(reverse("index"))
 			except User.DoesNotExist:
-				return render(request, &quot;login.html&quot;, {&quot;form&quot;: LoginForm})
-		return render(request, &quot;login.html&quot;, {&quot;form&quot;: LoginForm})
+				return render(request, "login.html", {"form": LoginForm})
+		return render(request, "login.html", {"form": LoginForm})
 
 	def logout_view(request):
 		logout(request)
-		return HttpResponseRedirect(reverse(&quot;login&quot;))
-	&#x60;&#x60;&#x60;
-	&lt;/details&gt;
-
+		return HttpResponseRedirect(reverse("login"))
+	```
 
 ## Exercise 7: Fix the Concert Page
 
-The &#x60;Concert&#x60; page shows a logged in authenticated user and their concerts. The user can either attend a concert or choose not to attend. As before, you will first fix the URL and then fix the concert view. You need to sign in as a valid user to test the tasks below. You can log in with a user you created in the previous exercises or create a brand new user.
+The `Concert` page shows a logged in authenticated user and their concerts. The user can either attend a concert or choose not to attend. As before, you will first fix the URL and then fix the concert view. You need to sign in as a valid user to test the tasks below. You can log in with a user you created in the previous exercises or create a brand new user.
 
 ## Your Tasks
 
 ### Task 1 : Fix concert URL
 
-Open the &#x60;Back-end-Development-Capstone/concert/urls.py&#x60; file in the editor.
+Open the `Back-end-Development-Capstone/concert/urls.py` file in the editor.
 
 1. You should see all the URLs defined in this file:
-	&#x60;&#x60;&#x60;
+	```
 	urlpatterns &#x3D; [
-		re_path(r&quot;^$&quot;, views.index, name&#x3D;&quot;index&quot;),
-		path(&quot;songs&quot;, views.songs, name&#x3D;&quot;songs&quot;),
-		path(&quot;photos&quot;, views.photos, name&#x3D;&quot;photos&quot;),
-		path(&quot;login/&quot;, views.login_view, name&#x3D;&quot;login&quot;),
-		path(&quot;logout/&quot;, views.logout_view, name&#x3D;&quot;logout&quot;),
-		path(&quot;signup/&quot;, views.signup, name&#x3D;&quot;signup&quot;),
-		path(&quot;&quot;, views.concerts, name&#x3D;&quot;concerts&quot;),
+		re_path(r"^$", views.index, name&#x3D;"index"),
+		path("songs", views.songs, name&#x3D;"songs"),
+		path("photos", views.photos, name&#x3D;"photos"),
+		path("login/", views.login_view, name&#x3D;"login"),
+		path("logout/", views.logout_view, name&#x3D;"logout"),
+		path("signup/", views.signup, name&#x3D;"signup"),
+		path("", views.concerts, name&#x3D;"concerts"),
 		...
 	]
-	&#x60;&#x60;&#x60;
-1. Replace the first empty string for the concert urlpattern with &#x60;concert/&#x60;.
-	&lt;details&gt;
-	&lt;summary&gt;Click here for a hint.&lt;/summary&gt;
+	```
+1. Replace the first empty string for the concert urlpattern with `concert/`.
+	```
+	path("concert/", views.concerts, name&#x3D;"concerts"),
+	```
 
-	&#x60;&#x60;&#x60;
-	path(&quot;concert/&quot;, views.concerts, name&#x3D;&quot;concerts&quot;),
-	&#x60;&#x60;&#x60;
-	&lt;/details&gt;
-
-1. If you click the &#x60;Concert&#x60; link now after logging in as a valid user, you will get an error. However, again, you have made progress and we will fix this error in the next Task.
+1. If you click the `Concert` link now after logging in as a valid user, you will get an error. However, again, you have made progress and we will fix this error in the next Task.
 
 
 ### Task 2 : Fix Concert View
-The Concert link is working, but the view is still broken. Open the &#x60;Back-end-Development-Capstone/concert/views.py&#x60; file in the editor.
+The Concert link is working, but the view is still broken. Open the `Back-end-Development-Capstone/concert/views.py` file in the editor.
 
-1. Go to the method named &#x60;concerts&#x60;.
-	&#x60;&#x60;&#x60;
+1. Go to the method named `concerts`.
+	```
 	def concerts(request):
     	pass
-	&#x60;&#x60;&#x60;
-1. This view will first check if the user is authenticated and if so, show the list of concerts to the user by rendering the &#x60;concerts.html&#x60; template with the appropriate data. We have provided the following skeleton code to get you started:
-	&#x60;&#x60;&#x60;
+	```
+1. This view will first check if the user is authenticated and if so, show the list of concerts to the user by rendering the `concerts.html` template with the appropriate data. We have provided the following skeleton code to get you started:
+	```
 	if {insert code to check if the user is authenticated}:
         lst_of_concert &#x3D; {insert code to create an empty list}
         concert_objects &#x3D; {insert code to get all Concerts using the Concert.objects object}
@@ -771,28 +706,25 @@ The Concert link is working, but the view is still broken. Open the &#x60;Back-e
                 status &#x3D; item.attendee.filter(
                     user&#x3D;request.user).first().attending
             except:
-                status &#x3D; &quot;-&quot;
+                status &#x3D; "-"
             lst_of_concert.append({
-                &quot;concert&quot;: item,
-                &quot;status&quot;: status
+                "concert": item,
+                "status": status
             })
-        return {insert code to render the &#x60;concerts.html&#x60; page with the data of {&quot;concerts&quot;: lst_of_concert}}
+        return {insert code to render the `concerts.html` page with the data of {"concerts": lst_of_concert}}
     else:
         return {insert code to redirect the user to the login page as the user is not authenticated}
-	&#x60;&#x60;&#x60;
+	```
 
-1. If your code works without errors, you should now see the list of concerts when you click the &#x60;concert&#x60; link after logging in as a valid user.
+1. If your code works without errors, you should now see the list of concerts when you click the `concert` link after logging in as a valid user.
 
-	![Django Concert Page](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-CD0320EN-SkillsNetwork/images/django-concerts-2.png &quot;Django Concert Page&quot;)
+	![Django Concert Page](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-CD0320EN-SkillsNetwork/images/django-concerts-2.png)
 
 Notice that the concert details are not showing up. You will fix this in the next exercise.
 
 ## Final Solution
 1. Ensure your solution for the login_view method matches the following:
-	&lt;details&gt;
-	&lt;summary&gt;Click here for the solution.&lt;/summary&gt;
-
-	&#x60;&#x60;&#x60;
+	```
 	def concerts(request):
 		if request.user.is_authenticated:
 			lst_of_concert &#x3D; []
@@ -802,19 +734,15 @@ Notice that the concert details are not showing up. You will fix this in the nex
 					status &#x3D; item.attendee.filter(
 						user&#x3D;request.user).first().attending
 				except:
-					status &#x3D; &quot;-&quot;
+					status &#x3D; "-"
 				lst_of_concert.append({
-					&quot;concert&quot;: item,
-					&quot;status&quot;: status
+					"concert": item,
+					"status": status
 				})
-			return render(request, &quot;concerts.html&quot;, {&quot;concerts&quot;: lst_of_concert})
+			return render(request, "concerts.html", {"concerts": lst_of_concert})
 		else:
-			return HttpResponseRedirect(reverse(&quot;login&quot;))
-	&#x60;&#x60;&#x60;
-	&lt;/details&gt;
-
-
----
+			return HttpResponseRedirect(reverse("login"))
+	```
 
 ## Exercise 8 - Admin and Models
 
@@ -822,63 +750,50 @@ You need to create a super user before you can create concerts.
 
 ### Task 1: Create a superuser
 1. Open the terminal and change into the project directory
-	&#x60;&#x60;&#x60;bash
+	```bash
 	cd /home/project/Back-end-Development-Capstone
-	&#x60;&#x60;&#x60;
-1. Create a superuser. Remember the username and password. The lab uses a username of &#x60;admin&#x60;, an email of &#x60;admin@admin.com&#x60;, and a password of &#x60;admin&#x60;.
-	&#x60;&#x60;&#x60;bash
+	```
+1. Create a superuser. Remember the username and password. The lab uses a username of `admin`, an email of `admin@admin.com`, and a password of `admin`.
+	```bash
 	python manage.py createsuperuser
-	&#x60;&#x60;&#x60;
+	```
 	The output should look as follows:
 
-	![django create superuser](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-CD0320EN-SkillsNetwork/images/django-create-superuser.png &quot;django create superuser&quot;)
+	![django create superuser](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-CD0320EN-SkillsNetwork/images/django-create-superuser.png)
 
 ### Task 2 : Register Concert model with the admin interface
 
-If you log into the admin site &#x60;/admin&#x60; with the superuser username and password, you will see that the concert object does not appear there. In this exercise, register the &#x60;concert&#x60; model with the admin interface.
+If you log into the admin site `/admin` with the superuser username and password, you will see that the concert object does not appear there. In this exercise, register the `concert` model with the admin interface.
 
-![Admin broken site](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-CD0320EN-SkillsNetwork/images/django-admin-broken.png &quot;Admin broken site&quot;)
+![Admin broken site](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-CD0320EN-SkillsNetwork/images/django-admin-broken.png)
 
-Open the &#x60;Back-end-Development-Capstone/concert/admin.py&#x60; file in the editor.
+Open the `Back-end-Development-Capstone/concert/admin.py` file in the editor.
 
-1. Register the &#x60;Concert model&#x60; with the admin interface.
-
-	&lt;details&gt;
-		&lt;summary&gt;Click here for a hint.&lt;/summary&gt;
-
-	&#x60;&#x60;&#x60;
+1. Register the `Concert model` with the admin interface.
+	```
 	admin.site.register(Concert)
-	&#x60;&#x60;&#x60;
-	&lt;/details&gt;
+	```
 
 ## Exercise 9: Push code back to GitHub
 
-Now that you have finished the code for the microservice, you can push the &#x60;backend-rest&#x60; branch back to your GitHub fork. Since you are the only one working on this project, go ahead and merge the PR and delete the branch. Make sure all your code changes are pushed back to the main branch before proceeding to the next lab.
+Now that you have finished the code for the microservice, you can push the `backend-rest` branch back to your GitHub fork. Since you are the only one working on this project, go ahead and merge the PR and delete the branch. Make sure all your code changes are pushed back to the main branch before proceeding to the next lab.
 
-1. Use the &#x60;git commit -am&#x60; command to commit your changes with the message &quot;implemented django application&quot;, and the &#x60;git push&#x60; command to push those changes to your repository.
+1. Use the `git commit -am` command to commit your changes with the message "implemented django application", and the `git push` command to push those changes to your repository.
 &gt; Note: You will be prompted to set up your git user and email the first time you push:
-	&#x60;&#x60;&#x60;
-	git config --local user.name &quot;{your GitHub name here}&quot;
+	```
+	git config --local user.name "{your GitHub name here}"
 	git config --local user.email {your GitHub email here}
-	&#x60;&#x60;&#x60;
+	```
 
-	&lt;details&gt;
-		&lt;summary&gt;Click here for a hint.&lt;/summary&gt;
-
-	&#x60;&#x60;&#x60;bash
-	git commit -am &quot;{message here}&quot;
+	```bash
+	git commit -am "{message here}"
 	git push --set-upstream origin {branch name here}
-	&#x60;&#x60;&#x60;
-	&lt;/details&gt;
+	```
 
-	&lt;details&gt;
-	&lt;summary&gt;Click here for a hint.&lt;/summary&gt;
-
-	&#x60;&#x60;&#x60;bash
-	git commit -am &quot;implemented django application&quot;
+	```bash
+	git commit -am "implemented django application"
 	git push --set-upstream origin backend-rest
-	&#x60;&#x60;&#x60;
-	&lt;/details&gt;
+	```
 
 1. Create a pull request on GitHub to merge your changes into the main branch, and, since there is no one else on your team, accept the pull request, merge it, and delete the branch.
 
